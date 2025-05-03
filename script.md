@@ -10,15 +10,21 @@ git can be downloaded from the [official website](https://git-scm.com/downloads)
 ## Local repository
 
 * Git stores only differences made to files.
-* Saved version of code is called a 'commit'.
+* Saved version of code is called a `commit`.
 * Four storages:
-    * Unstaged -> Staged -> Repository -> Remote Repository
+    * `Unstaged` -> `Staged` -> `Repository` -> `Remote Repository`
 
 ### Example
+
+* When making commit commit for the first time, you will be asked your e-mail and name, which will be included in each commit.
+* `.gitignore` file can be used to exclude some files from being committed. Possible uses include:
+  * Secret files such as passwords or tokens
+  * Compiled binary files (`*.jar`, `*.class`)
 
 ```shell
 # Initialize new repository
 git init
+# Repository created repository is stored in `.git` folder
 
 # Make new file
 
@@ -65,7 +71,7 @@ git reset --hard
 # Check status, no changes
 git status
 
-# See what changed in any commit (using commit id found in 'git log')
+# See what changed in any commit (using commit id found in `git log`)
 git show <commit_id>
 ```
 
@@ -112,9 +118,29 @@ git push -u origin
 
 
 # Switch to HTTP (could have been done initially)
-# On the website: Click 'CODE', then select 'HTTP', and copy URL
+# On the website: Click `CODE`, then select `HTTP`, and copy URL
 # In the console: switch origin from SSH to HTTP
 git remote set-url origin http://localhost/Admin/GitPresentation.git
 
+# Make some changes, stage, commit
 
+# Push to the server
+git push
+
+# Switch back to SSH (for convenience)
+git remote set-url origin git@localhost:Admin/GitPresentation.git
+
+# Switch to another folder
+
+# Clone existing repository (need to be cloned only for the first time)
+git clone git@localhost:Admin/GitPresentation.git
+
+# Make changes in one of the folders
+# Stage, commit, push
+
+# In the other folder, retrieve the changes
+git pull
 ```
+
+## Multiple contributors
+
