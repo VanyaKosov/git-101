@@ -70,3 +70,51 @@ git show <commit_id>
 ```
 
 ## Single + remote repository
+
+* There are many services that provide remote repository functionality (such as: GitHub, GitLab, BitBucket, self-hosted).
+* Benefits of remote repository include: 
+  * Backup (private/public)
+  * Synchronization between multiple devices
+  * Shared development
+* Accessing a remote repository requires authentication, such as:
+  * SSH (Secure Shell) key (no login or password required)
+    * Should generate unique key for every device.
+    * Consists of public and private key pair.
+    * Public key can be given to anyone.
+    * Private key should not be shared with anyone.
+  * HTTP (requires login and password)
+
+### Example
+
+First, you need to create an account on one of the git hosted services.
+(For testing purposes, self-hosted service is running [here](http://localhost))
+
+```shell
+# Generate SSH key (public and private pair), generated files are found at ~/.ssh
+# Already generated for this computer
+ssh-keygen -t ed25519 -C "SSH key name"
+
+# Find public SSH key
+cat ~/.ssh/id_ed25519.pub
+
+# Add public key to your account
+
+# Create a new repository on the website (also change default branch to master)
+
+# Change origin URL to SSH
+
+# Connect local repository to the remote one
+git remote add origin git@localhost:Admin/GitPresentation.git
+
+# Upload the repository to the server
+git push -u origin 
+
+
+
+# Switch to HTTP (could have been done initially)
+# On the website: Click 'CODE', then select 'HTTP', and copy URL
+# In the console: switch origin from SSH to HTTP
+git remote set-url origin http://localhost/Admin/GitPresentation.git
+
+
+```
