@@ -1,5 +1,7 @@
 # Script
 
+git can be downloaded from the [official website](https://git-scm.com/downloads)
+
 ## Two types of version control
 
 * Centralized, when repository is stored on one server. (such as Microsoft SourceSafe, SVN)
