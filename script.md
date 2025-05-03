@@ -63,5 +63,8 @@ git reset --hard
 # Check status, no changes
 git status
 
-
+# See what changed in any commit (using commit id found in 'git log')
+git show <commit_id>
 ```
+
+## Single + remote repository
