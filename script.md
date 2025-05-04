@@ -144,3 +144,7 @@ git pull
 
 ## Multiple contributors
 
+I will be brief in this part, as it is a huge topic. If needed, I can expand on it later.
+
+* When multiple people work on the same project, it is possible that their code might have a conflict. If multiple changes were made in one file to the same line, you will have to manually select which code to include.
+* 
