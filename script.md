@@ -53,7 +53,7 @@ git status
 git commit -m "only staged files are committed"
 
 # Check status, committed changes are not visible
-get status
+git status
 
 # Change committed file
 
