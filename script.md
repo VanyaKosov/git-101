@@ -7,6 +7,16 @@ git can be downloaded from the [official website](https://git-scm.com/downloads)
 * Centralized, when repository is stored on one server. (such as Microsoft SourceSafe, SVN)
 * Decentralized, when repository is stored locally, but a server can be used to sync code from multiple users. (such as Git)
 
+## Available programs
+
+* There are many programs that provide git functionality:
+  * git console application is the default way to work with git. (requires to learn commands)
+    *  Can be used in any console, including on all operating systems.
+  * Many IDEs support git integration out of box. (provide a graphical interface, may lack certain advanced features)
+    * For example: VS Code, Visual Studio, IntelliJ IDEs.
+  * Specialized applications.
+    * For example: Git GUI, Source Tree.
+
 ## Local repository
 
 * Git stores only differences made to files.
@@ -146,5 +156,7 @@ git pull
 
 I will be brief in this part, as it is a huge topic. If needed, I can expand on it later.
 
+* It is extremely important to establish a workflow for the whole team; otherwise, the repository will become a mess.
 * When multiple people work on the same project, it is possible that their code might have a conflict. If multiple changes were made in one file to the same line, you will have to manually select which code to include.
-* 
+
+There are many more widely used features such as: `checkout`, `branch`, `merge`, `rebase`, `tag`, etc.
